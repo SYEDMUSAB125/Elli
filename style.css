@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: rgb(0,10,36);
+    background: linear-gradient(90deg,rgba(0,10,36,1) 0%, rgba(0,0,0,1) 25%, rgba(68,2,64,1) 49%, rgba(25,11,25,1) 70%);
+    background-size: 300% 300%;
+    /* animation: backgroundAnimation 10s ease infinite; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 50%; }
+}
+
+#logo {
+    width: 20vw;
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+h1 {
+    color: aliceblue;
+    font-family: "Protest Guerrilla", sans-serif;
+    animation: textGlow 2s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #fff, 0 0 20px #00E5FF, 0 0 30px #fcfdfd, 0 0 40px #00E5FF; }
+ 
+}
+
+#name {
+    color: rgb(212, 43, 122);
+    font-size: 45px;
+}
+
+#VirAssist {
+    color: rgb(43, 206, 212);
+    font-size: 45px;
+}
+
+#voice {
+    width: 100px;
+    display: none;
+}
+
+#btn {
+    width: 30%;
+    background: linear-gradient(to right, rgb(21, 145, 207), rgb(201, 41, 116));
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 2px 2px 10px rgb(21, 145, 207), 2px 2px 10px rgb(201, 41, 116);
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+    animation: buttonHoverAnimation 3s ease-in-out infinite;
+}
+
+#btn:hover {
+    box-shadow: 2px 2px 20px rgb(21, 145, 207), 2px 2px 20px rgb(201, 41, 116);
+    letter-spacing: 2px;
+}
+
+@keyframes buttonHoverAnimation {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Media query responsiveness */
+@media(max-width: 480px) {
+    #logo {
+        width: 90vw;
+    }
+    #name, #VirAssist {
+        font-size: 40px;
+    }
+
+    #btn {
+        width: 90%;
+        font-size: 20px;
+        padding: 8px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    #logo {
+        width: 100vw;
+    }
+    #name, #VirAssist {
+        font-size: 40px;
+    }
+
+    #btn {
+        width: 90%;
+        font-size: 20px;
+        padding: 8px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    #logo {
+        width: 70vw;
+    }
+    #name, #VirAssist {
+        font-size: 40px;
+    }
+
+    #btn {
+        width: 90%;
+        font-size: 35px;
+        padding: 8px;
+        height: 70px;
+    }
+}
+
+@media (min-width: 1025px) {
+    #logo {
+        width: 25vw;
+    }
+
+    #name, #VirAssist {
+        font-size: 45px;
+    }
+
+    #btn {
+        width: 30%;
+        font-size: 35px;
+        padding: 10px;
+        height: 70px;
+    }
+}
